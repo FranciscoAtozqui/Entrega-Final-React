@@ -1,0 +1,25 @@
+header{
+    border-bottom: 1px solid black;
+}
+
+li{
+    margin: 1rem;
+    cursor: pointer;
+}
+
+li:hover{
+    color: rgb(0, 162, 255);
+    transition: .5s;
+}
+
+
+h1{
+    font-size: 35px;
+    cursor: pointer;
+}
+
+img{
+    width: 7rem;
+    margin-right: 1.5rem;
+}
+
