@@ -1,0 +1,12 @@
+.btnCount{
+    border-radius: 12px;
+    border: 1px solid #fd611a;
+    font-weight: bolder;
+    width: 8rem;
+}
+
+.btnCount:hover{
+    background-color: #fd611a;
+    transition: .3s;
+    border: 1px solid #000;
+}

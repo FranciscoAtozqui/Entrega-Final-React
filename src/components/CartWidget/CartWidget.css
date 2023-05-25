@@ -1,3 +1,24 @@
 .imgCarrito{
     width: 3rem;
+    cursor: pointer;
+    margin-right: -10px;
 }
+
+.spanCarrito{
+    background-color: #fd611a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    left: 24px;
+    font-size: 12px;
+}
+
+
+
+
+
