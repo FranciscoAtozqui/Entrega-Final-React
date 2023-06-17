@@ -9,12 +9,13 @@ const Item = ({ id, nombre, precio, img }) => {
                 <h5 className="card-title fw-bold"> {nombre}</h5>
                 <p className="card-text">Precio: ${precio}</p>
                 <p className='card-text'>ID: {id}</p>
-                <Link to={`/Item/${id}`}>Ver Detalles</Link>
-            </div>
+                <Link to={`/Item/${id}`} style={{ textDecoration: 'none' }}>
+                    <button className="btn btnProducto">Ver Detalles</button>
+                </Link>
+            </div>          
         </div>
     )
 }
 
 export default Item
 
-//<button className="btn btnProducto">Ver Detalles</button>

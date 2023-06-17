@@ -3,8 +3,31 @@
     border: 2px solid #ccc;
     border-radius: 8px;
     margin: 3rem;
+    background-color: #bcbcbc8f;
+}
+
+.contenedorItem h2{
+    font-weight: bold;
+    font-size: 40px;
 }
 
 .imgDetail{
-    width: 45vw;
+    width: 30vw;
+    cursor: pointer;
 }
+
+.btnProducto{
+    border-radius: 8px;
+    background-color: #fd611a;
+    font-weight: bold;
+    color: white;
+}
+
+.cart{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+
+

@@ -1,52 +1,43 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
 import './ItemCount.css'
+import { useState } from 'react'
+import { Link } from 'react-router-dom';
 
-const ItemCount = () => {
 
+const ItemCount = ({ inicial, stock, funcionAgregar }) => {
 
-    const [contador, setContador] = useState(1);
-    const [color, setColor] = useState("black");
-    const maximoCompra = 10;
+    const [contador, setContador] = useState(inicial);
 
-    useEffect(() => {
-        
-        if (contador > 5) {
-            setColor('red');
-        } else {
-            setColor('black');
-        }
-        
-    }, [contador])
-
-    const agregarAlCarrito = () => {
-        console.log(`Agregamos ${contador} Items`);
-    }
-
-    const sumarProducto = () => {
-        if (contador < maximoCompra) {
+    const incrementar = () => {
+        if (contador < stock) {
             setContador(contador + 1);
         }
     }
 
-    const restarProducto = () => {
-        if (contador > 1) {
+    const decrementar = () => {
+        if (contador > inicial) {
             setContador(contador - 1);
         }
     }
 
-  return (
-      <>
-        <div className='container'>
-            <div className='d-flex justify-content-center'>
-                <button  className='btnCount' onClick={sumarProducto}> + </button>
-                <p className='contador m-2 fw-bold'> {contador} </p>
-                  <button className='btnCount' onClick={restarProducto}> - </button>
-                  <button className='btnCount'  onClick={agregarAlCarrito} style={{color:color}}>Agregar al Carrito</button>
+    return (
+
+        <>
+            <div className='container'>
+                <div className='d-flex justify-content-center'>
+                    <button className='btnCount' onClick={incrementar}> + </button>
+                    <p className='contador m-2 fw-bold'> {contador} </p>
+                    <button className='btnCount' onClick={decrementar}> - </button>
+                </div>
+                <div className='d-flex justify-content-center mt-2'>
+                    <button className='btnProducto btn m-2' onClick={() => funcionAgregar(contador)}><span className="material-symbols-outlined cart">
+                        shopping_cart
+                    </span></button>
+                    <Link to='/'><button className='btnCheckout btn m-2'>Seguir Comprando</button></Link>
+                </div>
             </div>
-        </div>
-      </>
-  )
+        </>
+    )
 }
 
 export default ItemCount
